@@ -5,7 +5,7 @@ The website showcases my projects, skills, certifications, and provides a way to
 
 ## Live Website
 
-(Will be added after deployment)
+https://vishnuchilakala.dev/
 
 ## Features
 
