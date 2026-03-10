@@ -55,6 +55,134 @@ strong {
     color: var(--white);
 }
 
+/* ── Experience Section ── */
+
+#experience {
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-top: 3rem;
+}
+
+.exp-grid > .exp-card:only-child {
+    grid-column: 1 / -1;
+}
+
+/* card */
+
+.exp-card {
+    background: var(--bg);
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    transition: background .25s;
+    border-top: 1px solid var(--line);
+    min-height: 170px;
+}
+
+.exp-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    transition: width .35s ease;
+}
+
+.exp-card:hover::before {
+    width: 100%;
+}
+
+.exp-card:hover {
+    background: var(--bg2);
+}
+
+/* role */
+
+.exp-role {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: .6rem;
+    letter-spacing: -.02em;
+}
+
+/* company */
+
+.exp-company {
+    font-size: .75rem;
+    color: var(--muted2);
+    letter-spacing: .08em;
+    margin-bottom: 1rem;
+}
+
+/* description */
+
+.exp-desc {
+    font-size: .75rem;
+    color: var(--muted2);
+    line-height: 1.7;
+}
+
+/* arrow */
+
+.exp-arrow {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    color: var(--muted);
+    font-size: .9rem;
+    transition: transform .2s, color .2s;
+}
+
+.exp-card:hover .exp-arrow {
+    transform: translate(4px,-4px);
+    color: var(--green);
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+
+    .exp-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.exp-role {
+    transition: color .25s ease;
+}
+
+.exp-company,
+.exp-desc {
+    transition: color .25s ease;
+}
+
+.exp-card:hover .exp-role {
+    color: var(--green);
+}
+
+.exp-card:hover .exp-company,
+.exp-card:hover .exp-desc {
+    color: var(--white);
+}
+
+.exp-card:hover {
+    color: var(--white);
+}
+
 
 /* ── Certifications section ── */
 

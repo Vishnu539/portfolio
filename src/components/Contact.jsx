@@ -77,6 +77,11 @@ export default function Contact() {
                                 <span className="s-arrow">↗</span>
                             </a>
 
+                            <a href="https://drive.google.com/file/d/10P3XolSsnYS-Zt8UMpz3k4I8wJXT-U9U/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="social-link">
+                                <span>My Resume</span>
+                                <span className="s-arrow">↗</span>
+                            </a>
+
                         </div>
                     </div>
 

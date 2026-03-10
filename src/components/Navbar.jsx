@@ -72,11 +72,18 @@ export default function Navbar() {
                 </li>
 
                 <li>
-                    <a href="#certifications">
+                    <a href="#experience">
                         <span className="nav-dot"></span>
-                        Certifications
+                        Experience
                     </a>
                 </li>
+
+                {/*<li>*/}
+                {/*    <a href="#certifications">*/}
+                {/*        <span className="nav-dot"></span>*/}
+                {/*        Certifications*/}
+                {/*    </a>*/}
+                {/*</li>*/}
 
                 <li>
                     <a href="#projects">

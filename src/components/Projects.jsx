@@ -35,7 +35,7 @@ export default function Projects() {
                                 A multimodal emotion recognition system that combines
                                 text and speech signals to detect human
                                 emotions using deep learning models. The project
-                                integrates visual and audio features to improve emotion
+                                integrates textual and audio features to improve emotion
                                 classification performance across multiple emotion
                                 categories.
                             </div>
