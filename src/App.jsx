@@ -16,6 +16,21 @@ function App() {
 
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
+    const [showMobileNotice, setShowMobileNotice] = useState(false)
+
+    useEffect(() => {
+
+        const isMobile = window.innerWidth <= 768
+
+        if (isMobile) {
+            setShowMobileNotice(true)
+
+            setTimeout(() => {
+                setShowMobileNotice(false)
+            }, 4000)
+        }
+
+    }, [])
 
     useEffect(() => {
 
@@ -72,12 +87,20 @@ function App() {
         <>
             <Cursor />
             <Navbar />
+            {showMobileNotice && (
+                <div className="mobile-experience-note">
+                    Best experienced on a bigger screen.
+                </div>
+            )}
             <Hero />
             <About />
             <Skills />
             <Certifications />
             <Projects />
             <Contact />
+            <div className="mobile-notice">
+                For the best experience, view this portfolio on a larger screen.
+            </div>
             <Footer />
         </>
     )
