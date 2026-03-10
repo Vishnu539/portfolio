@@ -1,3 +1,5 @@
+import Typewriter from "typewriter-effect";
+
 export default function Hero() {
     return (
         <section id="hero">
@@ -19,7 +21,24 @@ export default function Hero() {
                     <span className="outline">Chilakala</span>
                 </h1>
 
-                <p className="hero-role">// Software Developer</p>
+                <p className="hero-role">
+                    <h2 className="hero-role">
+                        <span>//</span>
+                        <Typewriter
+                            options={{
+                                strings: [
+                                    "Software Developer",
+                                    "CS Student",
+                                    "Problem Solver"
+                                ],
+                                autoStart: true,
+                                loop: true,
+                                delay: 60,
+                                deleteSpeed: 40
+                            }}
+                        />
+                    </h2>
+                </p>
 
                 <p className="hero-bio">
                     Final year CS student passionate about problem solving,

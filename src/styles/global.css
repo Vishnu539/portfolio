@@ -73,7 +73,7 @@ body.light #cur-ring {
 }
 
 body.light .hero-name .outline {
-    -webkit-text-stroke: 1px rgba(0,0,0,.25);
+    -webkit-text-stroke: 1.2px rgba(0,0,0,.50);
 }
 
 body.light .hero-code {
@@ -100,6 +100,41 @@ body.light .cert-card:hover,
 body.light .exp-card:hover,
 body.light .project-card:hover {
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ── Custom Scrollbar ── */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--line2) var(--bg2);
+}
+
+/* track */
+::-webkit-scrollbar-track {
+    background: var(--bg2);
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+    background: var(--line2);
+    border-radius: 8px;
+    border: 2px solid var(--bg2);
+    transition: background .2s;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
+    transition:
+            background-color .35s ease,
+            color .35s ease,
+            border-color .35s ease,
+            box-shadow .35s ease;
 }
 
 
@@ -609,7 +644,7 @@ nav.scrolled {
     opacity: 0; animation: up .7s .25s forwards;
 }
 .hero-name .outline {
-    -webkit-text-stroke: 1px rgba(255,255,255,.18);
+    -webkit-text-stroke: 1.2px rgba(255,255,255,.50);
     color: transparent;
 }
 .hero-role {
@@ -617,6 +652,10 @@ nav.scrolled {
     color: var(--green); font-weight: 300; font-style: italic;
     margin-bottom: 2.5rem;
     opacity: 0; animation: up .7s .4s forwards;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
 }
 .hero-bio {
     font-size: .8rem; color: var(--muted2);
