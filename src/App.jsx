@@ -9,6 +9,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Cursor from "./components/Cursor"
 import Loader from "./components/Loader"
+import { Analytics } from "@vercel/analytics/react"
 
 import { initScrollReveal } from "./utils/scrollReveal"
 import { useState, useEffect } from "react"
@@ -104,6 +105,7 @@ function App() {
                 For the best experience, view this portfolio on a larger screen.
             </div>
             <Footer />
+            <Analytics />
         </>
     )
 }
