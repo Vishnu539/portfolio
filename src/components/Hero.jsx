@@ -29,6 +29,7 @@ export default function Hero() {
                                 strings: [
                                     "Software Developer",
                                     "CS Student",
+                                    "Fresher",
                                     "Problem Solver"
                                 ],
                                 autoStart: true,
