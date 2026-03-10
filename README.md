@@ -13,10 +13,9 @@ https://vishnuchilakala.dev/
 * Custom animated cursor
 * Smooth scroll animations
 * Interactive project showcase
-* Certifications section
 * Functional contact form using EmailJS
 * Loader animation with smart load detection
-* Minimal dark theme design
+* Minimal dark and light theme designs
 
 ## Tech Stack
 
@@ -31,53 +30,27 @@ https://vishnuchilakala.dev/
 ```
 src/
  ├── components
- │   ├── Navbar
- │   ├── Hero
  │   ├── About
- │   ├── Skills
  │   ├── Certifications
- │   ├── Projects
  │   ├── Contact
- │   ├── Footer
+ │   ├── Counter
  │   ├── Cursor
- │   └── Loader
+ │   ├── Experience
+ │   ├── Footer
+ │   ├── Hero
+ │   ├── Loader
+ │   ├── Navbar
+ │   ├── Projects
+ │   └── Skills
  │
  ├── utils
  │   └── scrollReveal
  │
- └── App.jsx
-```
-
-## Installation
-
-Clone the repository:
-
-```
-git clone https://github.com/Vishnu539/portfolio.git
-```
-
-Navigate into the project:
-
-```
-cd portfolio
-```
-
-Install dependencies:
-
-```
-npm install
-```
-
-Run the development server:
-
-```
-npm run dev
-```
-
-Build for production:
-
-```
-npm run build
+ ├── styles
+ │   └── global.css
+ │
+ ├── App.jsx
+ └── Main.jsx
 ```
 
 ## Contact
