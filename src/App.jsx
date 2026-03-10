@@ -18,6 +18,7 @@ function App() {
     const [loading, setLoading] = useState(true)
     const [fadeOut, setFadeOut] = useState(false)
     const [showMobileNotice, setShowMobileNotice] = useState(false)
+    const [theme, setTheme] = useState("dark")
 
     useEffect(() => {
 
@@ -32,6 +33,57 @@ function App() {
         }
 
     }, [])
+
+    useEffect(() => {
+
+        const savedTheme = localStorage.getItem("theme")
+        const favicon = document.getElementById("favicon")
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light")
+            setTheme("light")
+
+            if (favicon) {
+                favicon.href = "/favicon-light.png"
+            }
+
+        } else {
+
+            document.body.classList.remove("light")
+            setTheme("dark")
+
+            if (favicon) {
+                favicon.href = "/favicon-dark.png"
+            }
+
+        }
+
+    }, [])
+
+    const toggleTheme = () => {
+
+        const newTheme = theme === "dark" ? "light" : "dark"
+
+        setTheme(newTheme)
+
+        const favicon = document.getElementById("favicon")
+
+        if (newTheme === "light") {
+
+            document.body.classList.add("light")
+            favicon.href = "/favicon-light.png"
+
+        } else {
+
+            document.body.classList.remove("light")
+            favicon.href = "/favicon-dark.png"
+
+        }
+
+        localStorage.setItem("theme", newTheme)
+
+    }
 
     useEffect(() => {
 
@@ -87,7 +139,7 @@ function App() {
     return (
         <>
             <Cursor />
-            <Navbar />
+            <Navbar toggleTheme={toggleTheme} theme={theme} />
             {showMobileNotice && (
                 <div className="mobile-experience-note">
                     Best experienced on a bigger screen.
