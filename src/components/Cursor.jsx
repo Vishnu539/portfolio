@@ -12,6 +12,7 @@ export default function Cursor() {
         const ring = document.getElementById("cur-ring");
 
         let mx = 0, my = 0, rx = 0, ry = 0;
+        let visible = false;
 
         const move = (e) => {
             mx = e.clientX;
@@ -19,20 +20,22 @@ export default function Cursor() {
 
             cur.style.left = mx + "px";
             cur.style.top = my + "px";
-        };
 
-        const showCursor = () => {
-            cur.style.opacity = "1";
-            ring.style.opacity = "1";
+            // Show cursor on first movement
+            if (!visible) {
+                cur.style.opacity = "1";
+                ring.style.opacity = "1";
+                visible = true;
+            }
         };
 
         const hideCursor = () => {
             cur.style.opacity = "0";
             ring.style.opacity = "0";
+            visible = false;
         };
 
         document.addEventListener("mousemove", move);
-        document.addEventListener("mouseenter", showCursor);
         document.addEventListener("mouseleave", hideCursor);
 
         const tick = () => {
@@ -63,7 +66,6 @@ export default function Cursor() {
 
         return () => {
             document.removeEventListener("mousemove", move);
-            document.removeEventListener("mouseenter", showCursor);
             document.removeEventListener("mouseleave", hideCursor);
         };
 

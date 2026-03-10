@@ -33,7 +33,7 @@ export default function Projects() {
 
                             <div className="project-card-desc">
                                 A multimodal emotion recognition system that combines
-                                facial expressions and speech signals to detect human
+                                text and speech signals to detect human
                                 emotions using deep learning models. The project
                                 integrates visual and audio features to improve emotion
                                 classification performance across multiple emotion
@@ -65,7 +65,15 @@ export default function Projects() {
                         </div>
 
                         <div className="project-featured-visual">
-                            🎭
+
+                            <div className="visual-emoji">
+                                🎭
+                            </div>
+
+                            <div className="visual-illustration">
+                                <img src="public/bimer-visual.svg" alt="BiMER pipeline illustration" />
+                            </div>
+
                         </div>
 
                     </div>

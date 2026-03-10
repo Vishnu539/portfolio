@@ -20,6 +20,137 @@ html { scroll-behavior: smooth; }
     background-color: var(--line);
 }
 
+p,
+li,
+.about-text p,
+.project-card-desc,
+.contact-sub {
+    transition: color 0.25s ease;
+}
+
+.about-text p:hover,
+.project-card-desc:hover,
+.contact-sub:hover {
+    color: var(--white);
+}
+
+strong {
+    color: var(--green);
+}
+
+/* ── Hero text readability ── */
+
+.hero-bio,
+.hero-meta span {
+    transition: color .25s ease;
+}
+
+.hero-bio:hover,
+.hero-meta span:hover {
+    color: var(--white);
+}
+
+
+/* ── Certifications section ── */
+
+.cert-title,
+.cert-org {
+    transition: color .25s ease;
+}
+
+.cert-title:hover,
+.cert-org:hover {
+    color: var(--white);
+}
+
+
+/* ── Project stack tags ── */
+
+.stack-tag {
+    transition: color .25s ease;
+}
+
+.stack-tag:hover {
+    color: var(--white);
+}
+
+/* When hovering a project card, make all text white */
+.project-card:hover {
+    color: var(--white);
+}
+
+/* Ensure child text elements inherit the white color */
+.project-card:hover .project-card-desc,
+.project-card:hover .stack-tag,
+.project-card:hover .project-card-num {
+    color: var(--white);
+}
+
+/* Brighten all certification card text */
+.cert-card:hover {
+    color: var(--white);
+}
+
+.cert-card:hover .cert-org {
+    color: var(--white);
+}
+
+.cert-title {
+    transition: color .25s ease;
+}
+
+.cert-card:hover .cert-title {
+    color: var(--green);
+}
+
+/* container */
+.project-featured-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* emoji layer */
+.visual-emoji {
+    font-size: 4rem;
+    position: absolute;
+    transition: opacity .35s ease, transform .35s ease;
+}
+
+/* illustration layer */
+.visual-illustration {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(.9);
+    transition: opacity .35s ease, transform .35s ease;
+}
+
+.visual-illustration img {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+.project-featured-visual:hover .visual-emoji {
+    opacity: 0;
+    transform: scale(.8);
+}
+
+.project-featured-visual:hover .visual-illustration {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.project-featured-visual:hover {
+    box-shadow: 0 0 25px rgba(0,255,135,0.12);
+}
+
 body {
     background: var(--bg);
     color: var(--text);
