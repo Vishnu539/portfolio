@@ -39,7 +39,12 @@ function App() {
             checkReady()
         }
 
-        window.addEventListener("load", handleLoad)
+        // IMPORTANT FIX
+        if (document.readyState === "complete") {
+            handleLoad()
+        } else {
+            window.addEventListener("load", handleLoad)
+        }
 
         const timer = setTimeout(() => {
             minTimePassed = true

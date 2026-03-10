@@ -71,7 +71,7 @@ export default function Projects() {
                             </div>
 
                             <div className="visual-illustration">
-                                <img src="/bimer-visual.svg" alt="BiMER pipeline illustration" />
+                                <img src="/bimer-visual.svg" alt="BiMER pipeline illustration" loading="lazy"/>
                             </div>
 
                         </div>
