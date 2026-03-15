@@ -12,6 +12,7 @@ import Loader from "./components/Loader"
 
 import { initScrollReveal } from "./utils/scrollReveal"
 import { useState, useEffect } from "react"
+import Lenis from "lenis"
 
 function App() {
 
@@ -107,7 +108,6 @@ function App() {
             checkReady()
         }
 
-        // IMPORTANT FIX
         if (document.readyState === "complete") {
             handleLoad()
         } else {
@@ -131,6 +131,31 @@ function App() {
             initScrollReveal()
         }
     }, [loading])
+
+    /* ---------------- LENIS SMOOTH SCROLL ---------------- */
+
+    useEffect(() => {
+
+        const lenis = new Lenis({
+            duration: 1.2,
+            smoothWheel: true,
+            smoothTouch: false
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+
+        return () => {
+            lenis.destroy()
+        }
+
+    }, [])
+
+    /* ------------------------------------------------------ */
 
     if (loading) {
         return <Loader fadeOut={fadeOut} />

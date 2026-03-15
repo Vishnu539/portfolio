@@ -137,6 +137,14 @@ body.light .project-card:hover {
             box-shadow .35s ease;
 }
 
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
 
 /* ======================================================
    GLOBAL RESET
